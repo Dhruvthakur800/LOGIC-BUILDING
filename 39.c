@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int ch;
+    int a, b;
+
+    printf("1.Add  2.Sub  3.Mul  4.Div\nEnter choice: ");
+    scanf("%d", &ch);
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    switch(ch) {
+        case 1: printf("Sum = %d", a + b); break;
+        case 2: printf("Sub = %d", a - b); break;
+        case 3: printf("Mul = %d", a * b); break;
+        case 4: printf("Div = %d", a / b); break;
+        default: printf("Invalid choice");
+    }
+
+    return 0;
+}

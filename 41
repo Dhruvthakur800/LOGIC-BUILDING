@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n, choice;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("1. Square\n2. Cube\nEnter choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1: printf("Square = %d", n * n); break;
+        case 2: printf("Cube = %d", n * n * n); break;
+        default: printf("Invalid choice");
+    }
+
+    return 0;
+}
