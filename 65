@@ -1,0 +1,20 @@
+// Program: Print Binary Numbers from 1 to N using Recursion
+#include <stdio.h>
+void decimalToBinary(int n) {
+    if(n == 0) return;
+    decimalToBinary(n/2);
+    printf("%d", n%2);
+}
+void printBinary(int n) {
+    if(n == 0) return;
+    printBinary(n-1);
+    decimalToBinary(n);
+    printf("\n");
+}
+int main() {
+    int n;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    printBinary(n);
+    return 0;
+}

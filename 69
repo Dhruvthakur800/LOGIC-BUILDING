@@ -1,0 +1,20 @@
+// Program: Check Armstrong Number using Recursion
+#include <stdio.h>
+#include <math.h>
+int countDigits(int n) {
+    if(n == 0) return 0;
+    return 1 + countDigits(n/10);
+}
+int sumPowerDigits(int n, int digits) {
+    if(n == 0) return 0;
+    return pow(n%10, digits) + sumPowerDigits(n/10, digits);
+}
+int main() {
+    int num, digits;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    digits = countDigits(num);
+    if(sumPowerDigits(num,digits) == num) printf("Armstrong\n");
+    else printf("Not Armstrong\n");
+    return 0;
+}
